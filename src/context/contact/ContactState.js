@@ -25,7 +25,7 @@ export const useContacts = () => {
 // Get Contacts
 export const getContacts = async (dispatch) => {
   try {
-    const res = await axios.get("http://tranquil-shore-53136.herokuapp.com/api/contacts");
+    const res = await axios.get("https://tranquil-shore-53136.herokuapp.com/api/contacts");
 
     dispatch({
       type: GET_CONTACTS,
@@ -42,7 +42,7 @@ export const getContacts = async (dispatch) => {
 // Add Contact
 export const addContact = async (dispatch, contact) => {
   try {
-    const res = await axios.post("http://tranquil-shore-53136.herokuapp.com/api/contacts", contact);
+    const res = await axios.post("https://tranquil-shore-53136.herokuapp.com/api/contacts", contact);
 
     dispatch({
       type: ADD_CONTACT,
@@ -59,7 +59,7 @@ export const addContact = async (dispatch, contact) => {
 // Delete Contact
 export const deleteContact = async (dispatch, id) => {
   try {
-    await axios.delete(`http://tranquil-shore-53136.herokuapp.com/api/contacts/${id}`);
+    await axios.delete(`https://tranquil-shore-53136.herokuapp.com/api/contacts/${id}`);
 
     dispatch({
       type: DELETE_CONTACT,
@@ -76,7 +76,7 @@ export const deleteContact = async (dispatch, id) => {
 // Update Contact
 export const updateContact = async (dispatch, contact) => {
   try {
-    const res = await axios.put(`http://tranquil-shore-53136.herokuapp.com/api/contacts/${contact._id}`, contact);
+    const res = await axios.put(`https://tranquil-shore-53136.herokuapp.com/api/contacts/${contact._id}`, contact);
 
     dispatch({
       type: UPDATE_CONTACT,
