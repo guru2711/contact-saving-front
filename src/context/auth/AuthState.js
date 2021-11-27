@@ -24,7 +24,7 @@ export const useAuth = () => {
 // Load User
 export const loadUser = async (dispatch) => {
   try {
-    const res = await axios.get("http://tranquil-shore-53136.herokuapp.com/api/auth");
+    const res = await axios.get("https://tranquil-shore-53136.herokuapp.com/api/auth");
 
     dispatch({
       type: USER_LOADED,
@@ -38,7 +38,7 @@ export const loadUser = async (dispatch) => {
 // Register User
 export const register = async (dispatch, formData) => {
   try {
-    const res = await axios.post("http://tranquil-shore-53136.herokuapp.com/api/user", formData);
+    const res = await axios.post("https://tranquil-shore-53136.herokuapp.com/api/user", formData);
 
     dispatch({
       type: REGISTER_SUCCESS,
@@ -57,7 +57,7 @@ export const register = async (dispatch, formData) => {
 // Login User
 export const login = async (dispatch, formData) => {
   try {
-    const res = await axios.post("http://tranquil-shore-53136.herokuapp.com/api/auth", formData);
+    const res = await axios.post("https://tranquil-shore-53136.herokuapp.com/api/auth", formData);
 
     dispatch({
       type: LOGIN_SUCCESS,
